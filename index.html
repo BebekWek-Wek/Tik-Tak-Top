@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tik Tak Top Course | Pendaftaran Online</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+        background-color: #f8f9fa;
+      }
+      .jumbotron-custom {
+        height: 70vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+      }
+      .navbar-brand img {
+        border-radius: 4px;
+        background: white;
+        padding: 2px;
+      }
+      section {
+        padding: 80px 0;
+      }
+      .card {
+        border: none;
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+      }
+      .info-card:hover {
+        transform: translateY(-10px);
+        background-color: #0d6efd;
+        color: white;
+      }
+
+      footer {
+        background-color: #212529;
+        color: #ecf0f1;
+        padding: 50px 0 20px 0;
+      }
+      .social-icons a {
+        color: white;
+        margin-right: 15px;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+      #msg {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="Logo.jpeg" alt="Logo" width="35" height="35" class="me-2" />
+          <span class="fw-bold">TIK TAK TOP</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Layanan</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#pendaftaran"
+                    >Pendaftaran Anggota</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#info-layanan"
+                    >Informasi Layanan</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="koleksi.html">Koleksi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="home" class="jumbotron-custom">
+      <div class="container">
+        <h1 class="display-3 fw-bold mb-3">
+          Selamat Datang di Tik Tak Top Course
+        </h1>
+        <p class="lead mb-4">
+          Mencetak Generasi Unggul di Bidang Teknologi Informasi
+        </p>
+        <a
+          href="#pendaftaran"
+          class="btn btn-primary btn-lg px-5 rounded-pill shadow"
+          >Daftar Sekarang</a
+        >
+      </div>
+    </div>
+
+    <section id="pendaftaran">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card shadow-lg">
+              <div class="card-header bg-primary text-white text-center py-4">
+                <h3 class="mb-0">Formulir Pendaftaran Peserta</h3>
+                <small>Silakan isi data diri Anda dengan benar</small>
+              </div>
+              <div class="card-body p-4 p-md-5">
+                <form id="Formulir">
+                  <div class="row g-3">
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Nama Lengkap</label>
+                      <input
+                        id="Nama"
+                        type="text"
+                        name="Nama"
+                        class="form-control form-control-lg"
+                        placeholder="Masukkan nama lengkap"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">Program Kursus</label>
+                      <select
+                        id="Program"
+                        name="Program"
+                        class="form-select form-control-lg"
+                        required
+                      >
+                        <option value="">-- Pilih Program --</option>
+                        <option value="Desain Grafis">Desain Grafis</option>
+                        <option value="Web Programming">Web Programming</option>
+                        <option value="Data Analysis">Data Analysis</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">NIK / NIS</label>
+                      <input
+                        type="number"
+                        id="NIK/NIS"
+                        name="NIK/NIS"
+                        class="form-control form-control-lg"
+                        placeholder="(Maks 16 digit)"
+                        required
+                        oninput="javascript: if (this.value.length > 16) this.value = this.value.slice(0, 16);"
+                        onkeydown="return event.keyCode !== 69 && event.keyCode !== 190 && event.keyCode !== 187 && event.keyCode !== 189"
+                      />
+                    </div>
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Alamat Lengkap</label>
+                      <textarea
+                        id="Alamat"
+                        name="Alamat"
+                        class="form-control"
+                        rows="3"
+                        placeholder="Alamat tinggal saat ini"
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Nomor WhatsApp</label>
+                      <input
+                        id="WhatsApp"
+                        type="tel"
+                        name="WhatsApp"
+                        class="form-control form-control-lg"
+                        placeholder="Contoh: 081234567891"
+                        required
+                        maxlength="13"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 13);"
+                      />
+                    </div>
+                    <div class="col-12 mt-4">
+                      <button
+                        type="submit"
+                        class="btn btn-primary w-100 py-3 fw-bold text-uppercase shadow"
+                      >
+                        Kirim Data Pendaftaran
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <div id="msg" class="mt-4 text-center"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info-layanan" class="bg-white">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-2">Daftar Kelas Pilihan</h2>
+        <p class="text-muted mb-5">
+          Pilih program yang sesuai dengan minat dan bakat Anda
+        </p>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm p-4 info-card border">
+              <h4 class="fw-bold">Kelas Dasar Web</h4>
+              <p>
+                Belajar struktur web dari nol menggunakan HTML5, CSS3, dan
+                dasar-dasar UI/UX.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm p-4 info-card border">
+              <h4 class="fw-bold">Kelas Python Pemula</h4>
+              <p>
+                Mengenal logika pemrograman Python yang populer untuk automasi
+                dan AI.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm p-4 info-card border">
+              <h4 class="fw-bold">Kelas Excel untuk Data</h4>
+              <p>
+                Optimalkan pengolahan data bisnis Anda dengan rumus tingkat
+                lanjut dan visualisasi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-4 pb-4">
+      <section id="about" class="py-5 pb-0"></section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5 class="fw-bold mb-3 text-primary">TIK TAK TOP</h5>
+            <p class="small">
+              Lembaga Kursus Komputer terakreditasi yang berfokus pada
+              pengembangan skill praktis di era digital.
+            </p>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <h5 class="fw-bold mb-3">Kontak Kami</h5>
+            <p class="small mb-1">Jl. Pendidikan No. 101, Kota Pintar</p>
+            <p class="small mb-1">WA: 0812-3456-7890</p>
+            <p class="small">Email: halo@tiktaktop.com</p>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <h5 class="fw-bold mb-3">Ikuti Kami</h5>
+            <div class="social-icons">
+              <i
+                class="bi bi-instagram"
+                style="font-size: 1rem; color: #e1306c"
+              ></i>
+              <a href="https://www.instagram.com/ash.bih_/">Instagram</a>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 border-secondary" />
+        <div class="text-center small">
+          <p class="mb-0">
+            &copy; 2025 Tik Tak Top Course. Created with Bootstrap.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwTA-izOwIi8wvg5mZe836Bwk4hN_1DMVC0AeRFxEfekNRI8VRzqQPdaRhonhvHOf0XyA/exec";
+      const form = document.forms["Formulir"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>

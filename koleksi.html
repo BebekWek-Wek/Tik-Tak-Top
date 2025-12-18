@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koleksi Kursus - Tik Tak Top</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* CSS agar Navbar & Footer konsisten dengan index */
+      .navbar {
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-koleksi {
+        border: none;
+        border-radius: 15px;
+        transition: 0.3s;
+      }
+
+      .card-koleksi:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+      }
+
+      /* SCRIPT CSS CUSTOM */
+      body {
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+        background-color: #f8f9fa;
+      }
+
+      /* Navbar Styling */
+      .navbar-brand img {
+        border-radius: 4px;
+        background: white;
+        padding: 2px;
+      }
+
+      /* Section Styling */
+      section {
+        padding: 80px 0;
+      }
+
+      .card {
+        border: none;
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+      }
+
+      .info-card:hover {
+        transform: translateY(-10px);
+        background-color: #0d6efd;
+        color: white;
+      }
+
+      footer {
+        background-color: #212529;
+        color: #ecf0f1;
+        padding: 50px 0 20px 0;
+      }
+
+      .social-icons a {
+        color: white;
+        margin-right: 15px;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      #msg {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+ <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="Logo.jpeg" alt="Logo" width="35" height="35" class="me-2" />
+          <span class="fw-bold">TIK TAK TOP</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="koleksi.html">Koleksi</a>
+            </li>
+              </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </nav>
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Koleksi Program Kursus</h2>
+          <p class="text-muted">
+            Daftar kelas komputer yang tersedia saat ini.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 card-koleksi shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
+                style="border-radius: 15px 15px 0 0"
+                alt="Web"
+              />
+              <div class="card-body p-4">
+                <h5 class="fw-bold">Kelas Dasar Web</h5>
+                <p class="small text-muted">
+                  Belajar struktur web dari nol menggunakan HTML5, CSS3, dan
+                  dasar-dasar UI/UX.
+                </p>
+                <a href="#" class="btn btn-primary w-100">Lihat Detail</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 card-koleksi shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
+                style="border-radius: 15px 15px 0 0"
+                alt="Python"
+              />
+              <div class="card-body p-4">
+                <h5 class="fw-bold">Kelas Python Pemula</h5>
+                <p class="small text-muted">
+                  Mengenal logika pemrograman Python yang populer untuk automasi
+                  dan AI.
+                </p>
+                <a href="#" class="btn btn-primary w-100">Lihat Detail</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 card-koleksi shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
+                style="border-radius: 15px 15px 0 0"
+                alt="Excel"
+              />
+              <div class="card-body p-4">
+                <h5 class="fw-bold">Kelas Excel untuk Data</h5>
+                <p class="small text-muted">
+                  Optimalkan pengolahan data bisnis Anda dengan rumus tingkat
+                  lanjut dan visualisasi.
+                </p>
+                <a href="#" class="btn btn-primary w-100">Lihat Detail</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-4 pb-4">
+      <section id="about" class="py-5 pb-0"></section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5 class="fw-bold mb-3 text-primary">TIK TAK TOP</h5>
+            <p class="small">
+              Lembaga Kursus Komputer terakreditasi yang berfokus pada
+              pengembangan skill praktis di era digital.
+            </p>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <h5 class="fw-bold mb-3">Kontak Kami</h5>
+            <p class="small mb-1">Jl. Pendidikan No. 101, Kota Pintar</p>
+            <p class="small mb-1">WA: 0812-3456-7890</p>
+            <p class="small">Email: halo@tiktaktop.com</p>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <h5 class="fw-bold mb-3">Ikuti Kami</h5>
+            <div class="social-icons">
+              <i
+                class="bi bi-instagram"
+                style="font-size: 1rem; color: #e1306c"
+              ></i>
+              <a href="https://www.instagram.com/ash.bih_/">Instagram</a>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 border-secondary" />
+        <div class="text-center small">
+          <p class="mb-0">
+            &copy; 2025 Tik Tak Top Course. Created with Bootstrap.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

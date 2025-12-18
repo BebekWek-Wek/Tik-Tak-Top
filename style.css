@@ -1,0 +1,34 @@
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+.navbar-brand img {
+  border-radius: 5px;
+}
+.jumbotron-section {
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.card {
+  border: none;
+  border-radius: 15px;
+}
+.card-header {
+  border-radius: 15px 15px 0 0 !important;
+}
+#info-layanan .card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+  background-color: #0d6efd;
+  color: white;
+}
+#info-layanan .card:hover .text-muted {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+footer {
+  border-top: 5px solid #0d6efd;
+}
