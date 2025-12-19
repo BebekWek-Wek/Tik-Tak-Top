@@ -306,15 +306,56 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+      // Deklarasi hanya sekali
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbwTA-izOwIi8wvg5mZe836Bwk4hN_1DMVC0AeRFxEfekNRI8VRzqQPdaRhonhvHOf0XyA/exec";
       const form = document.forms["Formulir"];
+      const btnKirim = document.querySelector(".btn-primary.w-100");
+      const msgContainer = document.getElementById("msg");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => console.log("Success!", response))
-          .catch((error) => console.error("Error!", error.message));
+
+        // 1. Tampilkan status loading
+        btnKirim.disabled = true;
+        btnKirim.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Mengirim...`;
+        msgContainer.innerHTML = "";
+
+        fetch(scriptURL, {
+          method: "POST",
+          body: new FormData(form),
+        })
+          .then((response) => {
+            // 2. Kembalikan tombol ke normal
+            btnKirim.disabled = false;
+            btnKirim.innerHTML = "Kirim Data Pendaftaran";
+
+            // 3. Tampilkan pesan sukses
+            msgContainer.innerHTML = `
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <strong>Berhasil!</strong> Data pendaftaran Anda telah kami terima.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        `;
+
+            // 4. Kosongkan isi form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => {
+            // Jika gagal
+            btnKirim.disabled = false;
+            btnKirim.innerHTML = "Kirim Data Pendaftaran";
+
+            msgContainer.innerHTML = `
+          <div class="alert alert-danger" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            Gagal mengirim data. Silakan coba lagi nanti.
+          </div>
+        `;
+            console.error("Error!", error.message);
+          });
       });
     </script>
   </body>
